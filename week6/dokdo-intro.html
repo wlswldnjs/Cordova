@@ -1,0 +1,155 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>jQuery Mobile</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<style>
+   li { list-style:none; }
+  .picture { list-style:none; padding:0; margin:0; }
+  .picture li { float:left; width:50%;}
+  .picture li a {display:block; margin:5px; border: 1px }
+  .picture li img { display:block; width:50%;  height:auto;}
+  .picture li img:hover { display:block; width:100%;  height:auto;} 
+</style>
+</head>
+
+<body>
+<div data-theme="b">
+	<div data-role="page" id="home">
+		<div data-role="header" data-theme="b">
+			<h1>동의과학대학교 컴퓨터소프트웨어학과</h1>
+		</div>
+		<div data-role="content" style="text-align:center">
+				<img src="bgdokdo1.png" >
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#intro">교수소개</a></li>
+				<li><a href="#movie" data-rel="dialog">학과소개</a></li>
+				<li><a href="#wizard3-1" data-rel="dialog">대학 교가/상징</a></li>
+				<li><a href="#gallery">학과시설</a></li>
+			</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h1>동의과학대학교 컴퓨터소프트웨어학과</h1>
+		</div>
+	</div>
+	
+	<div data-role="page" id="intro" data-theme="b">
+		<div data-role="header" data-theme="b">
+			<a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>			
+			<h1>교수 소개</h1>
+		</div>
+		<div data-role="content">
+				<div  style="text-align:center">
+					<img src="bgdokdo2.png">
+				</div>			
+			<div data-role="collapsible-set" data-theme="b" data-content-theme="e">
+				<div data-role="collapsible" data-collapsed="false">
+					<img src="gjrytnsla.jpg">
+					<h3>허봉식 교수</h3>
+					<p> 직위/보직 : 교수/학과장</p>
+					<p> 담당과목 : C프로그래밍,웹개발기초II</p>
+					<p> 연락처 : 051-860-3213</p>
+				</div>
+				<div data-role="collapsible">
+					<img src="rlarytnsla.jpg">
+					<h3>김진숙 교수</h3>
+					<p> 직위/보직 : 교수</p>
+					<p> 담당과목 : 데이터베이스,웹개발기초</p>
+					<p> 연락처 : 051-860-3214</p>
+				</div>
+				<div data-role="collapsible" >
+					<img src="alsrytnsla.jpg">
+					<h3>김경민 교수</h3>
+					<p> 직위/보직 : 교수</p>
+					<p> 담당과목 : 이산수학,컴퓨터네트워크</p>
+				</div>
+				<div data-role="collapsible" >
+					<img src="wnrytnsla.jpg">
+					<h3>김주현 교수</h3>
+					<p> 직위/보직 : 교수</p>
+					<p> 담당과목 : 자료구조,하이브리드앱</p>
+				</div>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h1>동의과학대학교 컴퓨터소프트웨어학과</h1>
+		</div>		
+	</div>
+	
+	<div data-role="page" id="movie" data-theme="b">
+		<div data-role="header" data-position="fixed" data-theme="b">
+			<h1>홍보 영상</h1>
+		</div>
+		<div data-role="content" >
+			<div class="ui-bar ui-bar-a">컴퓨터소프트웨어학과 소개 동영상</div><br/>
+			<li><video controls width="100%" preload="metadata">
+				<source src= "gkrrhkdudtkd.mp4" type="video/mp4">
+			</video></li>
+			<div class="ui-bar ui-bar-a">캠퍼스 소개 동영상</div><br/>
+			<li><video controls width="100%" preload="metadata">
+				<source src="campus.mp4" type="video/mp4">
+			</video></li>
+		</div>
+		<div data-role="footer" data-theme="b">
+		</div>
+	</div>
+	
+	<div data-role="page" id="wizard3-1">
+		<div data-role="header">
+			<h1>교가</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e">  </div><br/>
+			<audio controls width="100%" preload="metadata">
+				<source src="song.mp3" type="audio/mp3">
+			</audio>	
+			<img src="ryrktkwls1.png" alt="" width="100%">
+		</div>
+		<div data-role="footer">
+			<a href="#home"  data-direction="reverse">이전</a>
+			<a href="#wizard3-2" data-rel="dialog" data-transition="slide">다음</a>
+		</div>
+	</div>
+
+	<div data-role="page" id="wizard3-2">
+		<div data-role="header">
+			<h1>대학 상징</h1>
+		</div>
+		<div data-role="content">
+			<div class="ui-bar ui-bar-e"></div><br/>
+				
+			<img src="symboll.png" alt="" width="100%">
+		</div>
+		<div data-role="footer">
+			<a href="#wizard3-1"  data-direction="reverse">이전</a>
+			<a href="#home">처음</a>
+		</div>
+	</div>
+
+	<div data-role="page" id="gallery"  data-theme="b">
+		<div data-role="header" data-position="fixed"  data-theme="b">
+			<a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
+			<h1>학과 갤러리</h1>
+		</div>
+		<div data-role="content">
+            <ul class="picture">
+				<li><a href="4-1.jpg" rel="external"><img src="4-1.jpg" /></a></li>	
+				<li><a href="4-2.jpg" rel="external"><img src="4-2.jfif" /></a></li>	
+				<li><a href="4-3.jpg" rel="external"><img src="4-3.jfif" /></a></li>	
+				<li><a href="4-4.jpg" rel="external"><img src="4-4.jfif" /></a></li>	
+				<li><a href="4-5.jpg" rel="external"><img src="4-5.jpeg" /></a></li>	
+				<li><a href="4-6.jpg" rel="external"><img src="4-6.png" /></a></li>	
+			
+            </ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h1>동의과학대학교 컴퓨터소프트웨어학과</h1>
+		</div>		
+	</div>
+</div>	
+</body>
+</html>
